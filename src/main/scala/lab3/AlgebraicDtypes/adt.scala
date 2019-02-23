@@ -2,8 +2,10 @@ package lab3.AlgebraicDtypes
 
 
 
-sealed trait Integer
-case class Calculator() extends Integer
+sealed trait Calculator
+case object Integer extends Calculator
+case object _String extends Calculator
+
 
 case class BottledWater(size: Int, source: String, carbonated: String)
 

@@ -4,7 +4,7 @@
 		module="bhle-scala$sources"
 		revision="0.1"
 		status="integration"
-		publication="20190309100518"
+		publication="20190309150524"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

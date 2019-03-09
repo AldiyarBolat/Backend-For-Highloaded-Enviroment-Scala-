@@ -57,8 +57,10 @@ object l3 extends App{
   val t7 = mcTiernan.films.map(f => f.yearOfRelease).min
 
   //val t8 = directors.flatMap(d => d.films.flatMap(f => f.sortWith(_.imdbRating) < _.im))
-  val t8 = directors.flatMap(d => d.films).sortWith(_i.mdbRating < _.imdbRating)
+  //val t8 = directors.flatMap(d => d.films.map(f => f)).sortWith( _.mdbRating < _.imdbRating)
 
+
+  val t10 = () => directors.foreach(d => d.films.foreach(f => println(s"Tonight only! ${f.name} by ${d.firstName}")))
 
 
 
@@ -85,13 +87,8 @@ object l3 extends App{
   println(t7)
   println()
 
-
-
-
-
-
-
-
+  t10
+  println()
 
 
 

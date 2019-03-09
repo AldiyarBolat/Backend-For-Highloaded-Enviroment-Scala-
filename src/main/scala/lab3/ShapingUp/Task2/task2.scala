@@ -18,7 +18,7 @@ class Circle(radius: Int) extends Shape{
 
 }
 
-trait Rectangular extends Shape {}
+trait Rectangular extends Shape
 
 class Rectangle(side: Int, height: Int) extends Rectangular{
 

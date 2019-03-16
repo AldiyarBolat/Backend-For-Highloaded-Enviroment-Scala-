@@ -11,15 +11,16 @@ object Options extends App{
       } yield value1 + value2
     }
 
-    def div(opt1: Option[Int], opt2: Option[Int]): Option[Int] =  {
+    def div(opt1: Option[Int], opt2: Option[Int]): Option[Double] =  {
       opt2 match {
-        case Some(0) => return None
+        case Some(0) => None
+        case _ => for {
+          value1 <- opt1
+          value2 <- opt2
+        } yield value1 / value2
       }
 
-      for {
-        value1 <- opt1
-        value2 <- opt2
-      } yield value1 / value2
+
     }
 
     def minus(opt1: Option[Int], opt2: Option[Int]): Option[Int] =  {
@@ -67,5 +68,5 @@ object Options extends App{
 
 
 
-  calculator("1", "/", "0")
+  calculator("1", "/", "3")
 }

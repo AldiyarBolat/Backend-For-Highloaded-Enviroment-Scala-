@@ -62,14 +62,14 @@ object l3 extends App{
   def t9() : Double = {
     val films: Seq[Film] = directors.flatten(director => director.films)
     val sum: Double = films.foldLeft(0.0)((sum, film) => sum + film.imdbRating)
-    return sum / films.size
+    sum / films.size
   }
 
   def t10 =  directors.foreach(d => d.films.foreach(f => println(s"Tonight only! ${f.name} by ${d.firstName} !")))
 
-  def t11(): Film = {
+  def t11(): Option[Film] = {
     val sorted = directors.flatten(d => d.films).sortWith((f1, f2) => (f1.yearOfRelease) < f2.yearOfRelease)
-    return sorted.head
+    sorted.headOption
   }
 
 
